@@ -1,0 +1,25 @@
+.history {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.history__item {
+	width: var(--color-size);
+	height: var(--color-size);
+	pointer-events: all;
+	contain: content;
+}
+
+
+@media (prefers-contrast: more) {
+	.history__item {
+		border: 1px dotted black;
+	}
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+	.history__item {
+		border: 1px dotted white;
+	}
+}

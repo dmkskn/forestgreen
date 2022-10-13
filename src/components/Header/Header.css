@@ -1,0 +1,220 @@
+/* HEADER VARIABLES */
+
+.header {
+	--border-color: rgb(217, 217, 217);
+	--border-width: 1px;
+	--background-color: white;
+	--text-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+	.header {
+		--border-color: rgb(70, 70, 70);
+		--border-width: 1px;
+		--background-color: black;
+		--text-color: white;
+	}
+}
+
+@media (prefers-contrast: more) {
+	.header {
+		--border-color: black;
+		--border-width: 1px;
+		--background-color: white;
+		--text-color: black;
+	}
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+	.header {
+		--border-color: white;
+		--border-width: 1px;
+		--background-color: black;
+		--text-color: white;
+	}
+}
+
+/* FROM SMALL SCREENS TO BIG ONES */
+
+/* MIN SCREEN WIDTH: 320px */
+
+/*
+	It starts with 3 columns.
+	Hero on top, then History and the Range.
+*/
+
+.header {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	pointer-events: all;
+}
+
+@media (pointer: fine) {
+	.header {
+		border-top: var(--border-width) solid var(--border-color);
+	}
+}
+
+@media (prefers-contrast: more) and (pointer: fine) {
+	.header {
+		border-top: var(--border-width) solid var(--border-color);
+	}
+}
+
+@media (prefers-contrast: more) and (pointer: coarse) {
+	.header {
+		border: var(--border-width) solid var(--border-color);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.22);
+	}
+}
+
+
+.header__item {
+	width: 100%;
+	--padding-vertical: 10px;
+	--padding-horizontal: 15px;
+	padding: var(--padding-vertical) var(--padding-horizontal);
+
+	/* to avoid bounsing on hover */
+	min-height: calc(var(--color-size) + (var(--padding-vertical) * 2));
+}
+
+@media (pointer: coarse) {
+	.header__item {
+		--padding-vertical: 15px;
+	}
+}
+
+
+.header__item--hero {
+	order: 1;
+	border-bottom: var(--border-width) dotted var(--border-color);
+}
+
+.header__item--history {
+	order: 2;
+	border-bottom: var(--border-width) dotted var(--border-color);
+}
+
+.header__item--columns-range {
+	order: 3;
+
+	/* make sure that slider is in the center (vertically) */
+	display: flex;
+	align-items: center;
+}
+
+/*
+	If width bigger than 450px and this is NOT a touch screen,
+	then Range and History will be on one row.
+*/
+
+@media (min-width: 450px) and (pointer: fine) {
+	.header__item--history, .header__item--columns-range {
+		border: none;
+	}
+
+	.header__item--history {
+		order: 3;
+		width: auto;
+		margin-left: auto;
+	}
+
+	.header__item--columns-range {
+		order: 2;
+		width: 250px;
+	}
+}
+
+/*
+	If width bigger than 700px and this IS a touch screen,
+	then Range and History will be on one row.
+
+	We make bowth Range and History equal 50%
+	because it's looks better.
+*/
+
+@media (min-width: 700px) and (pointer: coarse) {
+	.header__item--history, .header__item--columns-range {
+		border: none;
+	}
+
+	.header__item--history {
+		order: 3;
+		width: 50%;
+	}
+
+	.header__item--columns-range {
+		order: 2;
+		width: 50%;
+	}
+
+	.header:not(:has(.header__item--history)) .header__item--columns-range {
+		width: 100%;
+	}
+}
+
+/*
+	If width bigger than 750px and this is NOT a touch screen,
+	then you can make just one row.
+*/
+
+@media (min-width: 750px) and (pointer: fine) {
+	.header__item--history, .header__item--columns-range, .header__item--hero {
+		border: none;
+	}
+
+	.header__item--hero {
+		order: 3;
+		width: auto;
+		margin-left: auto;
+	}
+
+	.header__item--history {
+		order: 2;
+		width: auto;
+		margin-left: 0;
+	}
+
+	.header__item--columns-range {
+		order: 1;
+		width: 250px;
+	}
+}
+
+/*
+	If width bigger than 950px and this is NOT a touch screen,
+	then you can make just one row.
+
+	It is the same as 750px for fine pointers
+*/
+
+@media (min-width: 1024px) and (pointer: coarse) {
+	.header {
+		border: none;
+	}
+
+	.header__item--history, .header__item--columns-range, .header__item--hero {
+		border: none;
+	}
+
+	.header__item--hero {
+		order: 3;
+		width: auto;
+		margin-left: auto;
+	}
+
+	.header__item--history {
+		order: 2;
+		width: auto;
+		margin-left: 0;
+	}
+
+	.header__item--columns-range {
+		order: 1;
+		width: 250px;
+	}
+}

@@ -1,0 +1,10 @@
+.board {
+	display: grid;
+	--board-item-width: calc(100vw / var(--columns, 5));
+	grid-template-columns: repeat(var(--columns, 5), var(--board-item-width));
+	overflow-x: hidden;
+}
+
+.board__item {
+	width: var(--board-item-width);
+}

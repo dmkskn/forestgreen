@@ -1,0 +1,212 @@
+{
+	"name": "forestgreen",
+	"homepage": "https://forestgreen.online/",
+	"author": {
+		"name": "Dima Koskin",
+		"email": "dmkskn@dmkskn.com",
+		"url": "https://dmkskn.com"
+	},
+	"license": "MIT",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.10.4",
+		"@emotion/styled": "^11.10.4",
+		"@mui/material": "^5.10.9",
+		"@reduxjs/toolkit": "^1.8.6",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@types/jest": "^27.5.2",
+		"@types/node": "^17.0.45",
+		"@types/react": "^18.0.21",
+		"@types/react-dom": "^18.0.6",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-redux": "^8.0.4",
+		"react-scripts": "5.0.1",
+		"stylelint": "^14.14.0",
+		"typescript": "^4.8.4",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"format": "npx stylelint src/*/**.css --fix && npx eslint src --fix"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"rules": {
+			"quotes": [
+				"error",
+				"double"
+			],
+			"jsx-quotes": [
+				"error",
+				"prefer-double"
+			]
+		}
+	},
+	"stylelint": {
+		"rules": {
+			"color-no-invalid-hex": true,
+			"font-family-no-duplicate-names": true,
+			"function-calc-no-unspaced-operator": true,
+			"function-linear-gradient-no-nonstandard-direction": true,
+			"string-no-newline": true,
+			"unit-no-unknown": true,
+			"property-no-unknown": [
+				true,
+				{
+					"ignoreProperties": [
+						"print-color-adjust"
+					]
+				}
+			],
+			"declaration-block-no-shorthand-property-overrides": true,
+			"block-no-empty": true,
+			"selector-pseudo-class-no-unknown": true,
+			"selector-pseudo-element-no-unknown": true,
+			"selector-type-no-unknown": true,
+			"media-feature-name-no-unknown": true,
+			"at-rule-no-unknown": true,
+			"comment-no-empty": true,
+			"no-empty-source": true,
+			"no-extra-semicolons": true,
+			"no-invalid-double-slash-comments": true,
+			"no-unknown-animations": true,
+			"function-url-no-scheme-relative": true,
+			"number-max-precision": 3,
+			"declaration-block-single-line-max-declarations": 1,
+			"selector-max-empty-lines": 0,
+			"comment-word-disallowed-list": [
+				"todo"
+			],
+			"color-hex-case": "lower",
+			"color-hex-length": "long",
+			"font-family-name-quotes": "always-unless-keyword",
+			"function-comma-space-after": "always-single-line",
+			"function-comma-space-before": "never",
+			"function-max-empty-lines": 0,
+			"function-name-case": "lower",
+			"function-parentheses-newline-inside": "always-multi-line",
+			"function-parentheses-space-inside": "never-single-line",
+			"function-url-quotes": "always",
+			"function-whitespace-after": "always",
+			"number-leading-zero": "always",
+			"number-no-trailing-zeros": true,
+			"string-quotes": "single",
+			"length-zero-no-unit": true,
+			"unit-case": "lower",
+			"value-keyword-case": [
+				"lower",
+				{
+					"ignoreKeywords": [
+						"A4"
+					]
+				}
+			],
+			"value-list-comma-newline-after": "always-multi-line",
+			"value-list-comma-newline-before": "never-multi-line",
+			"value-list-comma-space-after": "always-single-line",
+			"value-list-comma-space-before": "never",
+			"value-list-max-empty-lines": 0,
+			"property-case": "lower",
+			"declaration-bang-space-after": "never",
+			"declaration-bang-space-before": "always",
+			"declaration-colon-space-after": "always-single-line",
+			"declaration-colon-space-before": "never",
+			"declaration-colon-newline-after": "always-multi-line",
+			"declaration-block-semicolon-newline-after": "always-multi-line",
+			"declaration-block-semicolon-space-after": "always-single-line",
+			"declaration-block-semicolon-space-before": "never",
+			"declaration-block-trailing-semicolon": "always",
+			"declaration-empty-line-before": "never",
+			"declaration-property-unit-allowed-list": {
+				"line-height": []
+			},
+			"block-closing-brace-empty-line-before": "never",
+			"block-closing-brace-newline-after": "always-multi-line",
+			"block-closing-brace-newline-before": "always-multi-line",
+			"block-closing-brace-space-before": "always-single-line",
+			"block-opening-brace-newline-after": "always-multi-line",
+			"block-opening-brace-space-after": "always-single-line",
+			"block-opening-brace-space-before": "always-single-line",
+			"selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+			"selector-attribute-brackets-space-inside": "never",
+			"selector-attribute-operator-space-after": "never",
+			"selector-attribute-operator-space-before": "never",
+			"selector-attribute-quotes": "always",
+			"selector-combinator-space-after": "always",
+			"selector-combinator-space-before": "always",
+			"selector-descendant-combinator-no-non-space": true,
+			"selector-pseudo-class-case": "lower",
+			"selector-pseudo-class-parentheses-space-inside": "never",
+			"selector-pseudo-element-case": "lower",
+			"selector-pseudo-element-colon-notation": "double",
+			"selector-type-case": "lower",
+			"selector-list-comma-newline-after": "always-multi-line",
+			"selector-list-comma-space-after": "always-single-line",
+			"selector-list-comma-space-before": "never",
+			"rule-empty-line-before": [
+				"always-multi-line",
+				{
+					"except": [
+						"first-nested"
+					]
+				}
+			],
+			"media-feature-colon-space-after": "always",
+			"media-feature-colon-space-before": "never",
+			"media-feature-name-case": "lower",
+			"media-feature-parentheses-space-inside": "never",
+			"media-feature-range-operator-space-after": "always",
+			"media-feature-range-operator-space-before": "always",
+			"media-query-list-comma-newline-after": "always-multi-line",
+			"media-query-list-comma-space-after": "always-single-line",
+			"media-query-list-comma-space-before": "never",
+			"at-rule-empty-line-before": [
+				"always",
+				{
+					"except": [
+						"blockless-after-blockless",
+						"first-nested"
+					]
+				}
+			],
+			"at-rule-name-case": "lower",
+			"at-rule-name-space-after": "always",
+			"at-rule-semicolon-newline-after": "always",
+			"at-rule-semicolon-space-before": "never",
+			"comment-empty-line-before": [
+				"always",
+				{
+					"except": [
+						"first-nested"
+					]
+				}
+			],
+			"comment-whitespace-inside": "always",
+			"indentation": "tab",
+			"max-empty-lines": 2,
+			"no-eol-whitespace": null,
+			"no-missing-end-of-source-newline": true
+		}
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

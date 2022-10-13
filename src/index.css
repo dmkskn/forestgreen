@@ -1,0 +1,92 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+
+@font-face {
+	font-family: 'Drafting Mono';
+	font-weight: 400;
+	font-display: swap;
+	src:
+		url('./fonts/DraftingMono/DraftingMono-Regular.woff2') format('woff2'),
+		url('./fonts/DraftingMono/DraftingMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Drafting Mono';
+	font-weight: 500;
+	font-display: swap;
+	src:
+		url('./fonts/DraftingMono/DraftingMono-Medium.woff2') format('woff2'),
+		url('./fonts/DraftingMono/DraftingMono-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Drafting Mono';
+	font-weight: 300;
+	font-display: swap;
+	src:
+		url('./fonts/DraftingMono/DraftingMono-Light.woff2') format('woff2'),
+		url('./fonts/DraftingMono/DraftingMono-Light.ttf') format('truetype');
+}
+
+
+:root {
+	--default-font-family:
+		'IBM Plex Serif',
+		ui-serif,
+		serif;
+
+	--code-font-family:
+		'Drafting Mono',
+		monospace;
+
+	--app-background-color: rgb(255, 255, 255);
+	--app-text-color: rgb(16, 16, 16);
+
+	--color-size: 20px;
+}
+
+@media (pointer: coarse) {
+	:root {
+		--color-size: 50px;
+	}
+}
+
+@media (pointer: coarse) and (max-width: 370px) {
+	:root {
+		--color-size: 40px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--app-background-color: rgb(0, 0, 0);
+		--app-text-color: rgb(255, 255, 255);
+	}
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-size-adjust: 100%;
+	font-family: var(--default-font-family);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	background: var(--app-background-color);
+	color: var(--app-text-color);
+}
+
+code {
+	font-family: var(--code-font-family);
+}
+
+body {
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
