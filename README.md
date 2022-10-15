@@ -1,5 +1,7 @@
 # forestgreen 🍃
 
+![](public/image.jpg)
+
 A [website](https://forestgreen.online) (or call it a single page application) to explore and copy to the clipboard HTML colors.
 
 ## Stack
