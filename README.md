@@ -39,4 +39,4 @@ Formats files in the `src` folder.
 
 ## Copyright
 
-Designed & Developed by [Dima Koskin](https://dmkskn.com).
+Designed and developed by [Dima Koskin](https://dmkskn.com). The fonts used are [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif) (designed by Make Abbink and Bold Monday) and [Drafting Mono](https://indestructibletype.com/Drafting/) (designed by Owen Earl).
